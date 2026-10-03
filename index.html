@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Happy 25th Birthday, Amritpal Kaur (Ammy) ✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --pink: #f5a6c8;
+            --gold: #f5c875;
+            --ink: #180e25
+        }
+
+        * {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: #160d22;
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden
+        }
+        body,html {
+            height: 100%;
+            overflow-x: hidden
+        }
+
+        body {
+            min-width: 320px
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif
+        }
+
+        .script {
+            font-family: 'Great Vibes', cursive
+        }
+
+        .teddy-emoji {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            vertical-align: middle
+        }
+
+        .hero-photo {
+            width: 64px;
+            height: 64px;
+            overflow: hidden;
+            border: 1px solid #f5c875aa;
+            border-radius: 8px;
+            background: #26142e;
+            vertical-align: middle
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .glow {
+            text-shadow: 0 0 24px #f5a6c899
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            background-image: radial-gradient(#fff 1px, transparent 1px), radial-gradient(#f5a6c8 1px, transparent 1px);
+            background-size: 90px 90px, 140px 140px;
+            background-position: 0 0, 40px 50px;
+            opacity: .2;
+            animation: drift 30s linear infinite
+        }
+
+        @keyframes drift {
+            to {
+                background-position: 300px 500px, -200px 350px
+            }
+        }
+
+        .gate {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: linear-gradient(135deg, #10091c, #321538);
+            transition: visibility 1.8s
+        }
+
+        .gate.open {
+            visibility: hidden
+        }
+
+        .door {
+            position: relative;
+            background: linear-gradient(90deg, #24112d, #6e3c55 48%, #26102c);
+            border: 5px ridge #d5a85f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 1.8s cubic-bezier(.7, 0, .2, 1)
+        }
+
+        .door:before {
+            content: "";
+            position: absolute;
+            inset: 5%;
+            border: 2px solid #d5a85f;
+            box-shadow: inset 0 0 30px #f5c87555
+        }
+
+        .door:after {
+            content: "✦";
+            color: #f5c875;
+            font-size: 3rem
+        }
+
+        .gate.open .left {
+            transform: perspective(900px) rotateY(-105deg);
+            transform-origin: left
+        }
+
+        .gate.open .right {
+            transform: perspective(900px) rotateY(105deg);
+            transform-origin: right
+        }
+
+        .gate-copy {
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            transition: opacity .5s
+        }
+
+        .gate.open .gate-copy {
+            opacity: 0
+        }
+
+        .btn {
+            background: linear-gradient(100deg, #f6b3d0, #f6d18a);
+            color: #29132d;
+            border-radius: 99px;
+            padding: 13px 28px;
+            font-weight: 600;
+            box-shadow: 0 0 28px #f5a6c855;
+            transition: .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 40px #f5a6c8aa
+        }
+
+        .section {
+            position: relative;
+            z-index: 2;
+            padding: 100px 6vw
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(ellipse at 75% 40%, #71334e88, transparent 45%), linear-gradient(135deg, #160d22, #30152f)
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            background: radial-gradient(circle, #ffd5a8aa, #d55b9b22 65%, transparent 70%);
+            animation: float 8s ease-in-out infinite
+        }
+
+        .orb.one {
+            width: 280px;
+            height: 280px;
+            right: 8%;
+            top: 15%
+        }
+
+        .orb.two {
+            width: 170px;
+            height: 170px;
+            left: 8%;
+            bottom: 10%;
+            animation-delay: -3s
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-25px) scale(1.06)
+            }
+        }
+
+        .photo {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border: 1px solid #f5c87577;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #40203d, #1a1027);
+            position: relative
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s
+        }
+
+        .photo img,
+        #lightboxImg {
+            user-select: none;
+            -webkit-user-drag: none
+        }
+
+        .photo:hover img {
+            transform: scale(1.08)
+        }
+
+        .photo span {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            text-shadow: 0 2px 8px #000
+        }
+
+        .timeline {
+            border-left: 1px solid #e8b86b66;
+            margin-left: 12px;
+            padding-left: 30px
+        }
+
+        .timeline article {
+            position: relative;
+            margin: 28px 0
+        }
+
+        .timeline article:before {
+            content: "♥";
+            position: absolute;
+            left: -40px;
+            color: #f5a6c8
+        }
+
+        .letter {
+            background: #fff5ed;
+            color: #38223a;
+            border-radius: 8px;
+            padding: clamp(28px, 6vw, 65px);
+            box-shadow: 0 20px 80px #0005;
+            transform: rotate(-1deg)
+        }
+
+        .music {
+            position: fixed;
+            z-index: 10;
+            right: 18px;
+            bottom: 18px;
+            border: 1px solid #f5c87588;
+            background: #26142ee8;
+            border-radius: 40px;
+            padding: 12px 17px;
+            backdrop-filter: blur(10px)
+        }
+
+        .lightbox-control {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            display: grid;
+            width: 48px;
+            height: 48px;
+            place-items: center;
+            transform: translateY(-50%);
+            border: 1px solid #f5c87588;
+            border-radius: 50%;
+            background: #26142ee8;
+            color: #fff;
+            font-size: 2rem;
+            line-height: 1
+        }
+
+        #lightboxPrev {
+            left: 16px
+        }
+
+        #lightboxNext {
+            right: 16px
+        }
+
+        .lightbox-count {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-shadow: 0 1px 8px #000
+        }
+
+        .mobile-menu {
+            position: absolute;
+            top: calc(100% + 1px);
+            right: 12px;
+            min-width: 180px;
+            padding: 8px;
+            border: 1px solid #ffffff24;
+            border-radius: 8px;
+            background: #1c1028f5;
+            box-shadow: 0 12px 32px #0006
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 5px
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a:focus-visible {
+            background: #ffffff14
+        }
+
+        @media (max-width: 640px) {
+            .section {
+                padding: 76px 6vw
+            }
+
+            .hero {
+                min-height: 100svh;
+                padding-top: 100px;
+                padding-bottom: 64px
+            }
+
+            .letter {
+                transform: none
+            }
+
+            .music {
+                right: 12px;
+                bottom: 12px;
+                padding: 10px 14px
+            }
+        }
+
+        .cake {
+            font-size: clamp(5rem, 16vw, 10rem);
+            filter: drop-shadow(0 0 25px #ff9cc9)
+        }
+
+        .footer {
+            background: linear-gradient(#160d22, #542044);
+            text-align: center
+        }
+
+        .hidden-section {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+    <!-- EDIT: change her name here -->
+    <div id="gate" class="gate">
+        <div class="door left"></div>
+        <div class="door right"></div>
+        <div class="gate-copy">
+            <p class="tracking-[.35em] uppercase text-sm text-amber-200 mb-5">A little magic awaits</p>
+                <h1 class="serif text-4xl md:text-6xl mb-5">A special day,<br><i class="text-pink-200">for Ammy</i></h1>
+            <p class="mb-8 text-pink-100">Step inside her birthday story ✨</p><button id="gateOpen" class="btn"
+                type="button">Open the doors ♥</button>
+        </div>
+    </div>
+    <nav
+        class="fixed top-0 left-0 right-0 z-20 flex justify-between items-center px-6 md:px-12 py-4 bg-[#160d22]/70 backdrop-blur-md border-b border-white/10">
+        <a href="#" class="serif text-xl text-pink-200">♥ Ammy, 25 & fabulous</a>
+        <div class="hidden md:flex gap-7 text-sm"><a href="#home">Home</a><a href="#gallery">Gallery</a><a
+                href="#memories">Memories</a><a href="#letter">A note</a><a href="#celebrate">Celebrate</a></div>
+        <button id="menuToggle" class="md:hidden rounded p-2 text-pink-100" type="button" aria-expanded="false"
+            aria-controls="mobileMenu" aria-label="Open navigation menu">☰</button>
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden">
+            <a href="#home">Home</a><a href="#gallery">Gallery</a><a href="#memories">Memories</a>
+            <a href="#letter">A note</a><a href="#celebrate">Celebrate</a>
+        </div>
+    </nav>
+    <main>
+        <section id="home" class="section hero">
+            <div class="orb one"></div>
+            <div class="orb two"></div>
+            <div class="max-w-4xl mx-auto text-center relative" data-aos="zoom-in" data-aos-duration="1400">
+                <p class="uppercase tracking-[.35em] text-amber-200 text-xs md:text-sm mb-6">Today the world celebrates
+                    you</p>
+                <div class="text-5xl mb-3 flex items-center justify-center gap-2"><span>✨ 🌷 ✨</span><button
+                    id="homePhoto" class="hero-photo" type="button" aria-label="Open featured birthday photo 23"><img
+                    src="images/img23.jpeg" alt="Ammy's featured birthday photo" draggable="false"></button><img
+                    class="teddy-emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f9f8.svg"
+                    alt="Teddy bear" width="48" height="48" decoding="async"></div>
+                <h1 class="serif text-5xl md:text-8xl leading-tight glow">Happy <span
+                        class="script text-pink-200">25th</span><br>Birthday</h1>
+                <p class="script text-4xl md:text-6xl text-pink-200 mt-3">Amritpal Kaur, Ammy ♥</p>
+                <p class="max-w-xl mx-auto text-white/75 mt-7 leading-8">“Ammy, may your days be soft with laughter,
+                    your arms full of love, and your dreams always within reach.”</p><a href="#gallery"
+                    class="btn inline-block mt-9">Explore your memories ↓</a>
+            </div>
+        </section>
+        <section id="gallery" class="section bg-[#fff5f0] text-[#321d35]">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <p class="text-xs tracking-[.3em] uppercase text-pink-700">A collection of lovely moments</p>
+                    <h2 class="serif text-4xl md:text-6xl mt-3">Ammy's beautiful gallery</h2>
+                    <p class="mt-3 text-gray-600">24 moments, countless reasons to smile.</p>
+                    <blockquote class="serif italic text-lg md:text-xl text-pink-800 mt-5">“The best memories are the
+                        little moments we get to share with you, Ammy.”</blockquote>
+                </div>
+                <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5"></div>
+            </div>
+        </section>
+        <section id="memories" class="section">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <p class="uppercase tracking-[.3em] text-amber-200 text-xs">Every chapter made you</p>
+                    <h2 class="serif text-4xl md:text-6xl mt-3">The journey so far</h2>
+                    <p class="text-white/60 mt-3">A little timeline of a life that keeps blooming.</p>
+                </div>
+                <div class="timeline text-white/80">
+                    <article data-aos="fade-up">
+                        <h3 class="serif text-2xl text-pink-200">The little dreamer</h3>
+                        <p class="mt-2">Where it all began — curious eyes and a heart full of wonder.</p>
+                    </article>
+                    <article data-aos="fade-up">
+                        <h3 class="serif text-2xl text-pink-200">Growing & glowing</h3>
+                        <p class="mt-2">Learning, laughing, making memories and finding your own sparkle.</p>
+                    </article>
+                    <article data-aos="fade-up">
+                        <h3 class="serif text-2xl text-pink-200">The beautiful now</h3>
+                        <p class="mt-2">Twenty-five years of becoming someone truly wonderful.</p>
+                    </article>
+                    <article data-aos="fade-up">
+                        <h3 class="serif text-2xl text-pink-200">A brighter tomorrow</h3>
+                        <p class="mt-2">May the next chapter be your most magical one yet. ✨</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="letter" class="section bg-[#f7e8e7]">
+            <div class="max-w-3xl mx-auto" data-aos="flip-up">
+                <div class="letter">
+                    <p class="text-pink-700 tracking-[.25em] text-xs uppercase">From the heart</p>
+                    <h2 class="serif text-4xl md:text-5xl mt-3">A little note for you</h2>
+                    <p class="mt-8 leading-8 text-lg">Dear Ammy,<br><br>On your 25th birthday, I hope you
+                        remember how loved, special, and wonderfully unique you are. Keep chasing the dreams that make
+                        your eyes sparkle. Keep laughing loudly, loving deeply, and being unapologetically
+                        yourself.<br><br>May this year bring you beautiful surprises, peaceful days, exciting
+                        adventures, and all the happiness your heart can hold.<br><br><span
+                            class="script text-4xl text-pink-700">Happy 25th Birthday! ♥</span></p>
+                    <p class="mt-8 text-right serif italic">With lots of love ✨</p>
+                </div>
+            </div>
+        </section>
+        <section id="celebrate" class="section footer">
+            <div data-aos="zoom-in" class="max-w-3xl mx-auto">
+                <p class="text-amber-200 uppercase tracking-[.3em] text-xs">Make a wish</p>
+                <h2 class="serif text-5xl md:text-7xl mt-4">Cheers to 25!</h2>
+                <div class="cake my-7">🎂</div>
+                <p class="text-white/75 text-lg">Same beautiful soul, Ammy. Bigger dreams. Brighter future.</p><button
+                    id="partyButton" class="btn mt-8" type="button">Celebrate! 🎉</button>
+                <p class="script text-4xl text-pink-200 mt-12">You are one of a kind ♥</p>
+            </div>
+        </section>
+    </main>
+    <button id="musicToggle" class="music" type="button" aria-label="Play background music">♫ <span
+            id="musicLabel">Play music</span></button>
+    <audio id="song" src="tute.mp3" preload="metadata" loop></audio>
+    <div id="lightbox" class="fixed inset-0 z-40 bg-black/90 hidden items-center justify-center p-5" role="dialog"
+        aria-modal="true" aria-label="Birthday memory" aria-hidden="true">
+        <button id="lightboxClose" class="absolute top-5 right-7 text-4xl" type="button"
+            aria-label="Close image">×</button>
+        <button id="lightboxPrev" class="lightbox-control" type="button" aria-label="Previous photo">‹</button>
+        <img id="lightboxImg" class="max-h-[85vh] max-w-full rounded-xl object-contain" alt="Birthday memory">
+        <button id="lightboxNext" class="lightbox-control" type="button" aria-label="Next photo">›</button>
+        <p id="lightboxCount" class="lightbox-count" aria-live="polite"></p>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script>
+        if (window.AOS) AOS.init({ duration: 900, once: true, offset: 80 });
+        const song = document.getElementById('song');
+        const musicToggle = document.getElementById('musicToggle');
+        const musicLabel = document.getElementById('musicLabel');
+        function updateMusicControl() {
+            const playing = !song.paused;
+            const unavailable = Boolean(song.error);
+            musicLabel.textContent = playing ? 'Pause music' : unavailable ? 'Music unavailable' : 'Play music';
+            musicToggle.setAttribute('aria-label', playing ? 'Pause background music' : unavailable ? 'Background music unavailable' : 'Play background music');
+        }
+        async function startMusic() {
+            try { await song.play() } catch { }
+            updateMusicControl();
+        }
+        function openGate() {
+            document.getElementById('gate').classList.add('open');
+            window.dispatchEvent(new Event('scroll'));
+            setTimeout(() => document.getElementById('gate').style.display = 'none', 1900);
+            startMusic();
+            party();
+        }
+        const grid = document.getElementById('galleryGrid');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCount = document.getElementById('lightboxCount');
+        const photoCount = 24;
+        let activePhotoIndex = 0;
+        function showLightboxPhoto(index) {
+            activePhotoIndex = (index + photoCount) % photoCount;
+            const photoNumber = activePhotoIndex + 1;
+            lightboxImg.src = `images/img${photoNumber}.jpeg`;
+            lightboxImg.alt = `Birthday memory ${photoNumber} of ${photoCount} for Ammy`;
+            lightboxCount.textContent = `${photoNumber} / ${photoCount}`;
+        }
+        function openLightbox(index) {
+            showLightboxPhoto(index);
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            lightbox.setAttribute('aria-hidden', 'false');
+        }
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightbox.setAttribute('aria-hidden', 'true');
+            lightboxImg.removeAttribute('src');
+            grid.children[activePhotoIndex]?.focus();
+        }
+        for (let i = 1; i <= photoCount; i++) {
+            const card = document.createElement('button');
+            const image = document.createElement('img');
+            const caption = document.createElement('span');
+            card.type = 'button';
+            card.className = 'photo';
+            card.setAttribute('data-aos', 'fade-up');
+            card.setAttribute('aria-label', `Open birthday memory ${i}`);
+            image.src = `images/img${i}.jpeg`;
+            image.alt = `Birthday memory ${i}`;
+            image.loading = 'lazy';
+            image.draggable = false;
+            image.onerror = () => {
+                image.remove();
+                card.classList.add('flex', 'flex-col', 'items-center', 'justify-center', 'text-pink-100');
+                card.textContent = `Photo ${i} unavailable`;
+            };
+            caption.textContent = '♥';
+            card.append(image, caption);
+            card.addEventListener('contextmenu', event => event.preventDefault());
+            card.addEventListener('click', () => {
+                if (!image.isConnected) return;
+                openLightbox(i - 1);
+            });
+            grid.appendChild(card);
+        }
+        document.getElementById('homePhoto').addEventListener('click', () => openLightbox(22));
+        document.getElementById('homePhoto').addEventListener('contextmenu', event => event.preventDefault());
+        musicToggle.addEventListener('click', () => {
+            if (song.paused) startMusic();
+            else { song.pause(); updateMusicControl(); }
+        });
+        song.addEventListener('play', updateMusicControl);
+        song.addEventListener('pause', updateMusicControl);
+        song.addEventListener('error', updateMusicControl);
+        updateMusicControl();
+        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        document.getElementById('lightboxPrev').addEventListener('click', () => showLightboxPhoto(activePhotoIndex - 1));
+        document.getElementById('lightboxNext').addEventListener('click', () => showLightboxPhoto(activePhotoIndex + 1));
+        lightboxImg.addEventListener('contextmenu', event => event.preventDefault());
+        lightbox.addEventListener('click', event => {
+            if (event.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', event => {
+            if (lightbox.getAttribute('aria-hidden') !== 'false') return;
+            if (event.key === 'Escape') closeLightbox();
+            else if (event.key === 'ArrowLeft') showLightboxPhoto(activePhotoIndex - 1);
+            else if (event.key === 'ArrowRight') showLightboxPhoto(activePhotoIndex + 1);
+        });
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        document.getElementById('gateOpen').addEventListener('click', openGate);
+        document.getElementById('partyButton').addEventListener('click', party);
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
+            menuToggle.setAttribute('aria-label', expanded ? 'Open navigation menu' : 'Close navigation menu');
+            mobileMenu.classList.toggle('hidden', expanded);
+        });
+        mobileMenu.addEventListener('click', event => {
+            if (event.target.closest('a')) {
+                mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation menu');
+            }
+        });
+        function party() { if (window.confetti) { confetti({ particleCount: 130, spread: 90, origin: { y: .65 }, colors: ['#f5a6c8', '#f5c875', '#ffffff', '#c9a7ff'] }); setTimeout(() => confetti({ particleCount: 70, angle: 60, spread: 65, origin: { x: 0, y: .7 } }), 250); setTimeout(() => confetti({ particleCount: 70, angle: 120, spread: 65, origin: { x: 1, y: .7 } }), 450) } }
+    </script>
+</body>
+
+</html>
